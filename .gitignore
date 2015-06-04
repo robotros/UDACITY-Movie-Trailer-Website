@@ -1,5 +1,7 @@
 #Python Cahce
 __pycache__\
+*.pyc
+
 
 # Windows image file caches
 Thumbs.db

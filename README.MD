@@ -1,24 +1,33 @@
-PROJECT 1
+# **PROJECT 1**
+
+## Description
 
 Project 1 is a Dynamic Movie trailer website themed around Star Wars.
 and Developed by Aron Roberts through UDACITY tutrials and lessons.
+for the purpose of meeting UDACITY Full Stack web Developer Project 1 : Movie Trailer Website
 
-WHAT'S INCLUDED
+## What is Included
 
-entertainment_test.py
-fresh_tomatoes.py
-movie.py
-README.MD
+* entertainment_test.py
+* fresh_tomatoes.py
+* movie.py
+* README.MD
 
-DEPENDENCIES
+## Dependencies
 
-Python 2.7 or Python 3.4
-*compatible web browser
+This was built using only the python standard libraries and therefore has minimum dependencies.
+The following will be required to run this program
 
-QUICKSTART
+1. Python 2.7 or Python 3.4
+2. *compatible web browser
+
+## Quickstart
 
 run entertainment_test.py in Python
 
 
 
-* tested in latest verisions of FireFox, Chrome, and Edge
+### Footnotes
+
+1. *tested in latest verisions of FireFox, Chrome, and Edge
+2. Project Requirements can be found at [UDACITY.com](http://www.UDACITY.com/)
