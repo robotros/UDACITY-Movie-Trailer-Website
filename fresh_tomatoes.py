@@ -77,21 +77,16 @@ main_page_head = '''
     </style>
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
-        $(document).on('click',
-                       '.hanging-close,
-                       .modal-backdrop,
-                       .modal',
-                       function (event) {
-            // Remove the src so the player itself gets removed,
-            // Only reliable way to ensure the video stops playing in IE
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
             $("#trailer-video-container").empty();
         });
         // Start playing the video whenever the trailer modal is opened
         $(document).on('click', '.movie-tile', function (event) {
             var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
             var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
-            $("#trailer-video-container").empty().append($("<iframe></iframe>",
-            {
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
               'id': 'trailer-video',
               'type': 'text-html',
               'src': sourceUrl,
@@ -171,14 +166,14 @@ def create_movie_tiles_content(movies):
                                                          movie.trailer_youtube_url)
         trailer_youtube_id = youtube_id_match.group(0) if youtube_id_match else None
 
-    # Append the tile for the movie with its content filled in
-    # Added storyline and rating
-    content += movie_tile_content.format(
-      movie_title=movie.title,
-      poster_image_url=movie.poster_image_url,
-      trailer_youtube_id=trailer_youtube_id,
-      storyline=movie.storyline,
-      rating=movie.rating)
+        # Append the tile for the movie with its content filled in
+        # Added storyline and rating
+        content += movie_tile_content.format(
+          movie_title=movie.title,
+          poster_image_url=movie.poster_image_url,
+          trailer_youtube_id=trailer_youtube_id,
+          storyline=movie.storyline,
+          rating=movie.rating)
 
     return content
 
